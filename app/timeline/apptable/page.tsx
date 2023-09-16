@@ -2,7 +2,7 @@ import React from 'react'
 
 const AppTable = () => {
     return (
-        <div>App table</div>
+        <div>App Main table</div>
     )
 }
 
