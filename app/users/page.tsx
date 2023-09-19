@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import UserTable from './UserTable'
+import Link from 'next/link'
 
 // Accessing query string parameters from the URL 
 interface Props {
@@ -9,8 +10,10 @@ interface Props {
 const UsersPage = async ({ searchParams: { sortOrder } }: Props) => {
     return (
         <div>
-            page {sortOrder}
-            <UserTable sortOrder={sortOrder}></UserTable>
+            <Link href='/users/new' className='btn'>New User</Link>
+            <Suspense fallback={<p>Loading...</p>}>
+                <UserTable sortOrder={sortOrder}></UserTable>
+            </Suspense>
         </div>
     )
 }
