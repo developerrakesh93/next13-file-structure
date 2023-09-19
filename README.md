@@ -1,16 +1,17 @@
-In this module we will be covering Routing and Navigation. Below are the checklist which are covered
+In this module we will be covering Navigation. Below are the checklist which are covered
 
-1.  Routing based on [id]. For eg., (/users/1 ) ( /users/2)
-2.  Routing based on [[slug]](optional slug) . For eg., /products/grocery/store/id
-3.  Adding Nav Bar and click of the moving to /users.
-4.  Admin layout is created for only admin users, other respective layout added in main Layout will be common for all the pages inside Project.
-5.  Added sorting on click of Id, Name, Email. (Using Fast Sort).
+1. Currently Link is used to navigate between the pages below are the points about Link
 
-Details of above points :
+   a. Only downloads the content of the target page.
+   b. Pre-fetches links that are in the viewport.
+   c. Caches pages on the client.
 
-1. Routing is done based on AppRouter if FOLDERNAME/page.tsx is present can access FOLDERNAME as route in the mail URL and if there are userid to be accessed add [id] as folder name and access the route users/1 , users/2
+2. Programatic Navigation : use of - import { useRouter } from 'next/navigation' - to push to another Page.
 
-2. Routing based on [[slug]] - optional slug, is for sub routes /products - (/grocery/store/list)
-3. Navbar is added for overall project to nagivate between the pages.
-4. Admin layout is created for only admin users, other respective layout added in main Layout will be common for all the pages inside Project.
-5. For server side rendering always try to get value from query parmas instead of using state.
+3. Adding the <suspense> tag to load between the data if data is fetched is slow and can append loading part in the app & route level.
+
+4. Can Change the Page Not Found error by adding new file in the respective folder or root folder i.e., not-found.tsx
+
+5. If there is doesn't (' - apostrophe used in the file need to replace with &apos or use string literal) or else it will throw error in the build time.
+
+6. Separate error page can be handled in the route level or in the app level i.e., error.tsx
