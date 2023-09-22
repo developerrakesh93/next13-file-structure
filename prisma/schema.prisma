@@ -18,3 +18,12 @@ model User {
   followers    Int      @default(0)
   registeredAt DateTime @default(now())
 }
+
+model Product {
+  id           Int      @id @default(autoincrement())
+  name         String
+  price        Float
+  isActive     Boolean  @default(true)
+  followers    Int      @default(0)
+  registeredAt DateTime @default(now())
+}
