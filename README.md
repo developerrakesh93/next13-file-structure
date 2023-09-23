@@ -1,9 +1,8 @@
-In this Module will be covering below points and will be verifying database whether values are updated
+In this Module will be covering below points
 
-1. Creating Data
-2. Updating Data
-3. Deleting data
-4. Getting all data
-5. Upload file to Cloudinary so install npm i next-cloudinary
-6. after sigin to cloudinary copy this from web and put in .env file NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
-7. Creating the upload API using <CldUploadWidget> and Previewing the image.
+1. Install npm i next-auth
+2. Go to documentation and give create folder catch all [...nextauth] insise API
+3. To get value for NEXTAUTH_SECRET type this command in the terminal openssl rand -base64 32
+4. Configuring google provider for SSO login , Using OAuth google sign in is done with next-auth
+5. When user logsin next-auth creates an authentication session for user by default it represent session using JSON web token (jwt).
+6. Accessing session on the client with getServerSession so that in the server side only session will be handled.
