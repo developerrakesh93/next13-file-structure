@@ -1,8 +1,9 @@
 In this Module will be covering below points
 
-1. Install npm i next-auth
-2. Go to documentation and give create folder catch all [...nextauth] insise API
-3. To get value for NEXTAUTH_SECRET type this command in the terminal openssl rand -base64 32
-4. Configuring google provider for SSO login , Using OAuth google sign in is done with next-auth
-5. When user logsin next-auth creates an authentication session for user by default it represent session using JSON web token (jwt).
-6. Accessing session on the client with getServerSession so that in the server side only session will be handled.
+1. Middleware
+2. Database Adapter
+3. General login with username and password and registering the user with bcrypt
+
+   1. Middleware is executed before request is getting completed. If the user is trying to access the route without session, user will be loggedout immediately. Mainly middleware protects the routes which is declared as in the path .
+   2. After SSO sign in we need to store data of the signin users thats where database adaptors come in picture.
+   3. POST API for registering username and password.
