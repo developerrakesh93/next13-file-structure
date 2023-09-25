@@ -1,9 +1,11 @@
 In this Module will be covering below points
 
-1. Middleware
-2. Database Adapter
-3. General login with username and password and registering the user with bcrypt
+1. Image optimization - Next js optimizeses image in background.
+2. With image optimization Next js helps to render good quality images to protect this register image in next js image component and configure in next config file as remote image.
+3. With remote images we need to specify the height and width.
+4. sizes='100vw' this is given to make image responsive .
+   (max-width: 480px) 100vw (max-width: 768px) 50vw, 33vw
 
-   1. Middleware is executed before request is getting completed. If the user is trying to access the route without session, user will be loggedout immediately. Mainly middleware protects the routes which is declared as in the path .
-   2. After SSO sign in we need to store data of the signin users thats where database adaptors come in picture.
-   3. POST API for registering username and password.
+(max-width: 480px) 100vw -- for Mobile devices
+(max-width: 768px) 50vw -- for Tablets
+33vw - For rest of the devices
